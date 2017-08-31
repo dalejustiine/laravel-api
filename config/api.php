@@ -19,7 +19,7 @@ return [
     |
     */
 
-    'standardsTree' => env('API_STANDARDS_TREE', 'x'),
+    'standardsTree' => env('API_STANDARDS_TREE', 'prs'),
 
     /*
     |--------------------------------------------------------------------------
@@ -110,7 +110,7 @@ return [
     |
     */
 
-    'strict' => env('API_STRICT', false),
+    'strict' => env('API_STRICT', true),
 
     /*
     |--------------------------------------------------------------------------

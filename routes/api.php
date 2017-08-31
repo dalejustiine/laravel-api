@@ -36,5 +36,3 @@ $api->version('v1', function($api) {
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-// Route::post('authenticate', 'AuthenticateController@authenticate');

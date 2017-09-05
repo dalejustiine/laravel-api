@@ -7,6 +7,7 @@ use App\Http\Controllers\ApiController;
 use App\Cy;
 use App\Preference;
 use App\Student;
+use DB;
 
 class StudentController extends ApiBaseController
 {
@@ -57,7 +58,7 @@ class StudentController extends ApiBaseController
             throw new \Symfony\Component\HttpKernel\Exception\BadRequestHttpException("Invalid student number format!");
         }
 
-        $cy = DB::connection()
+        $cy = DB::connection('dbiusis16')
             ->table('sresu')
             ->join('student_records', 'sresu.id', '=', 'student_records.student_id')
             ->join('enlisted', 'student_records.id', '=', 'enlisted.student_rec_id')

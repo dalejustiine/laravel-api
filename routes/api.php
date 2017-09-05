@@ -24,7 +24,7 @@ $api->version('v1', function($api) {
         $api->get('/cys/{student_number}', 'App\Http\Controllers\StudentController@getCy');
 
         $api->get('/preferences', 'App\Http\Controllers\StudentController@getAllPreferences');
-        $api->get('/preferences/{student_number}', 'App\Http\Controllers\StudentController@getPreference');
+        $api->get('/preferences/{preference_id}', 'App\Http\Controllers\StudentController@getPreference');
 
         $api->get('/schedules/{student_number}/{preference_id}', 'App\Http\Controllers\StudentController@getSchedules');
         $api->get('/grades/{student_number}/{preference_id}', 'App\Http\Controllers\StudentController@getGrades');
